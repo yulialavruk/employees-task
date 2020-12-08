@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import { UseEmployees } from "./useEmployees";
 import { EmployeesList } from "./EmployeesList";
 import { BirthdayList } from "./BirthdayList";
@@ -7,7 +6,6 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
 export const Employees = () => {
-  // const classes = useStyles();
   const employees = UseEmployees();
   const [checked, setChecked] = useState([]);
 
@@ -27,7 +25,6 @@ export const Employees = () => {
             employees={employees.data}
             setChecked={setChecked}
             checked={checked}
-            // handleToggle={handleToggle}
           />
         </Grid>
         <Grid item xs={3}>
